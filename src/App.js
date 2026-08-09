@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import UserList from "./UserList";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="header">
+        <p className="small-title">JSONPLACEHOLDER API</p>
+
+        <h1>User Directory</h1>
+
+        <p>Users loaded from an external API using React Hooks and Axios.</p>
       </header>
+
+      <UserList />
     </div>
   );
 }

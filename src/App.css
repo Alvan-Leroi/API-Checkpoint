@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  margin: 0;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  font-family: Arial, Helvetica, sans-serif;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  min-height: 100vh;
+
+  padding: 50px 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* HEADER */
+
+.header {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.header h1 {
+  margin: 5px 0 12px;
+
+  font-size: 45px;
+
+  color: #f8fafc;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+.small-title {
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  color: #60a5fa !important;
+}
+
+/* USERS */
+
+.user-list {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 25px;
+}
+
+/* USER CARD */
+
+.user-card {
+  padding: 28px;
+
+  background-color: white;
+
+  color: #1e293b;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* USER AVATAR */
+
+.avatar {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover .avatar {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* USER NAME */
+
+.user-card h2 {
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: #0f172a;
+}
+
+/* USER DETAILS */
+
+.user-card p {
+  color: #64748b;
+
+  line-height: 1.6;
+
+  margin: 8px 0;
+}
+
+.user-card strong {
+  color: #334155;
+}
+
+/* WEBSITE */
+
+.user-card a {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.user-card a:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+/* STATUS */
+
+.status-message {
+  text-align: center;
+
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 30px 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header h1 {
+    font-size: 34px;
   }
 }
